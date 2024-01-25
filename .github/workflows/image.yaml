@@ -35,6 +35,6 @@ jobs:
         run: |
           IMAGE_TAG="${{ env.SHA_SHORT }}" make docker
 
-          docker tag oryd/kratos:$IMAGE_TAG bohrasd/kratos:$IMAGE_TAG
+          docker tag oryd/kratos:${{ env.SHA_SHORT }} bohrasd/kratos:${{ env.SHA_SHORT }}
 
-          docker push bohrasd/kratos:$IMAGE_TAG
+          docker push bohrasd/kratos:${{ env.SHA_SHORT }}
