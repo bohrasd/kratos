@@ -38,7 +38,7 @@ jobs:
           #docker tag oryd/kratos:${{ env.SHA_SHORT }} bohrasd/kratos:${{ env.SHA_SHORT }}
 
           #docker push bohrasd/kratos:${{ env.SHA_SHORT }}
-        name: Build and push
+      - name: Build and push
         uses: docker/build-push-action@v5
         with:
           context: .
